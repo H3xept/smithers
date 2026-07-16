@@ -2837,10 +2837,9 @@ function checkWatchAndSteerDocsMatchCurrentUiSurface() {
 function checkReadmeAvoidsDeprecatedRalphPromotion() {
   const readme = readFileSync(README, "utf8");
   const required = [
-    // The hero workflow-runs screenshot was removed with the unreleased UI; the
-    // README no longer ships that image, so only the Loop primitive guidance and
-    // the Ralph/Studio-avoidance rules below are enforced.
-    "| `<Loop>`     | Repeat tasks until a condition is met  |",
+    // The README carries no hero workflow-runs screenshot and no primitive
+    // table; the Loop code example and the Ralph/Studio-avoidance rules below
+    // are what is enforced.
     "<Loop until={ctx.latest(outputs.review, \"validate\")?.approved} maxIterations={5}>",
     "</Loop>",
   ];

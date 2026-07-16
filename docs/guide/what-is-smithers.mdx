@@ -69,6 +69,20 @@ Plans the migration, pauses for your approval, then executes milestone by milest
 
 None of these need a workflow file or a terminal. You ask, Smithers runs it durably, and you get higher-quality output than a one-shot prompt, with the structure real work demands.
 
+## When to use Smithers
+
+| You want to… | Smithers? |
+| --- | --- |
+| Get one answer from one prompt | No, call the model directly |
+| Let a coding agent change a repo across many steps | **Yes** |
+| Pause for a human approval, then resume later | **Yes** |
+| Run several agents that review, retry, and converge | **Yes** |
+| Survive crashes and replay, fork, or rewind a run | **Yes** |
+
+Smithers is the durable runtime for *coding-agent* work: when the unit of work is an agent
+editing a real repository over many steps, and you need that work to be inspectable,
+approvable, and recoverable.
+
 ## Read next
 
 <CardGroup cols={3}>
